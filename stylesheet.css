@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Clemente;
+    src: url(media/fonts/ClementsPDai-Regular.ttf);
+}
+@font-face {
+    font-family: Sansation;
+    src: url(media/fonts/Sansation_Regular.ttf);
+}
+
+body {
+    background-color: #8f8796;
+    background-image: url("media/cookie.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#content {
+    text-align: center;
+    padding-top: 12em;
+}
+
+p {
+    font-family: Sansation;
+    font-size: 24px;
+}
+
+button {
+    border-radius: 8px;
+}
