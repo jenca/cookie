@@ -9,7 +9,7 @@
 
 body {
     background-color: #8f8796;
-    background-image: url("media/cookie.png");
+    background-image: url("media/images/cookie.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -22,6 +22,8 @@ body {
 p {
     font-family: Sansation;
     font-size: 24px;
+    color: white;
+    text-shadow: 0px 1px 5px black;
 }
 
 button {
