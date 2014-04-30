@@ -22,19 +22,44 @@ var list =[
     "When everything is coming your way, you're in the wrong lane."
 ];
 
+var new_list = [];
+var current_cookie = 0;
+
+var check = function(item, new_list) {
+    for(var i = 0; i < new_list.length; i++) {
+        var current_item = new_list[i];
+        if(current_item === item){
+            return true;
+        };
+    };
+    return false;
+};
+
+for(var i = 0; i < list.length; i++) {
+    var item = list[Math.floor(Math.random() * list.length)]
+    if(check(item, new_list) == false) {
+        new_list.push(item);
+    };
+};
+
 var get_fortune = function() {
-    return list[Math.floor(Math.random() * list.length)];
-}
+    return new_list[current_cookie];
+};
 
 var set_fortune = function(fortune) {
     $('p').html(fortune);
-}
+};
 
 var change_fortune = function() {
     set_fortune(get_fortune());
-}
+    current_cookie += 1;
+    if(current_cookie === new_list.length) {
+        current_cookie = 0;
+    };
+    $('p').animate({textShadow: "#000000 0px 2px 5px;"})
+};
 
 $(document).ready(function() {
     change_fortune();
-    $('button').click(change_fortune);
+    $('button').click(change_fortune)
 });
